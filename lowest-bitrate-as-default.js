@@ -8,7 +8,7 @@
     var optionLength = bitrate.options.length;
     for (i = 0; i < optionLength; ++i) {
         option = bitrate.options[i];
-        if (option.value == 300) {
+        if (option.value == 300 || option.value == 500) {
             option.selected = true;
             break;
         }
