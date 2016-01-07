@@ -6,11 +6,12 @@
     }
 
     var optionLength = bitrate.options.length;
-    for (i = 0; i < optionLength; ++i) {
+    var min = bitrate.options[0];
+    for (i = 1; i < optionLength; ++i) {
         option = bitrate.options[i];
-        if (option.value == 300 || option.value == 500) {
-            option.selected = true;
-            break;
+        if (parseInt(min.value) > parseInt(option.value)) {
+            min = option;
         }
     }
+    min.selected = true;
 }());
